@@ -224,8 +224,7 @@ class CabinetCalculator:
              
    
     def ask_door_bottom_height(self):
-        door_bottom_height = simpledialog.askfloat("Tall Boy with Doors and Drawers", 
-                                                   "Enter the height to the bottom of the doors (mm):")
+        door_bottom_height = simpledialog.askfloat("Tall Boy with Doors and Drawers", "Enter the height to the bottom of the doors (mm):")
         return door_bottom_height
 
     def update_cabinet_listbox(self):
@@ -243,8 +242,7 @@ class CabinetCalculator:
 
         for i, cabinet in enumerate(self.cabinets, start=1):
             for component in cabinet.components:
-                self.preview_text.insert(tk.END, f"Unit {i},{component.component_type},{component.quantity},
-                                         {component.width},{component.height},{component.material}\n")
+                self.preview_text.insert(tk.END, f"Unit {i},{component.component_type},{component.quantity},{component.width},{component.height},{component.material}\n")
 
     def export_to_csv(self):
         if not self.cabinets:
